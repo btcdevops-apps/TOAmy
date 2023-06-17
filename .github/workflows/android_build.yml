@@ -13,7 +13,7 @@ jobs:
         with:
           java-version: 11
       - run: |
-          yes | sdkmanager --install "build-tools;34.0.0-rc3"
+          yes | $ANDROID_HOME/tools/bin/sdkmanager --install "build-tools;34.0.0-rc3"
       #- name: Setup Android SDK
       #  uses: android-actions/setup-android@v3
 
