@@ -1,0 +1,38 @@
+name: Android UI Tests
+
+on: pull_request
+
+jobs:
+  android-test:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        api-level: [33]
+        target: [google_apis]
+        arch: [x86_64]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 17
+      #- run: |
+      #    yes | $ANDROID_HOME/tools/bin/sdkmanager --install "build-tools;34.0.0-rc3"
+        #yes | $ANDROID_HOME/tools/bin/sdkmanager --install "system-images;android-33;google_apis_playstore;x86 platforms;android-33 build-tools;34.0.0-rc3 platform-tools emulator"
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v2.0.10
+
+      - name: Run Tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ matrix.api-level }}
+          target: ${{ matrix.target }}
+          arch: ${{ matrix.arch }}
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: ./gradlew app:connectedCheck
