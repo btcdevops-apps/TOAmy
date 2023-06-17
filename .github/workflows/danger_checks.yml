@@ -20,6 +20,7 @@ jobs:
 
       - name: Danger Checks
         run: |
+          gem uninstall bundler
           gem install bundler
           bundle install
           bundle exec danger
