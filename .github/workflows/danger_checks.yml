@@ -16,13 +16,15 @@ jobs:
       - name: Set Up Ruby
         uses: actions/setup-ruby@v1.152.0
         with:
-          ruby-version: 2.6
+          ruby-version: '3.0'
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
       - name: Danger Checks
         run: |
           gem install bundler
-          bundle install
           bundle exec danger
+        #bundle install
+
 
         env:
           DANGER_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
