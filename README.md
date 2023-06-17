@@ -6,6 +6,13 @@ As we build out this project, our goal will reemain on how we can look after use
 
 ## Stream History
 
+## [Danger for PR Automation](https://danger.systems/guides/getting_started.html)
+* Add Gemfile
+* Add Dangerfile
+* Add github action for danger checks danger_checks.yml
+* github token:
+  * DANGER_GITHUB_API_TOKEN
+    * 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
 
 ## Github Actions
 * Errors:
