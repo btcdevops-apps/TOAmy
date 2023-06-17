@@ -12,9 +12,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
-
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+      - run: |
+          yes | sdkmanager --install "build-tools;34.0.0-rc3"
+      #- name: Setup Android SDK
+      #  uses: android-actions/setup-android@v3
 
       - name: Build Project
         run: ./gradlew assemble
