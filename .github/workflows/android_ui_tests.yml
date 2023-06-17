@@ -13,8 +13,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 17
-      - run: |
-          yes | $ANDROID_HOME/tools/bin/sdkmanager --install "build-tools;34.0.0-rc3"
+      #- run: |
+      #    yes | $ANDROID_HOME/tools/bin/sdkmanager --install "build-tools;34.0.0-rc3"
         #yes | $ANDROID_HOME/tools/bin/sdkmanager --install "system-images;android-33;google_apis_playstore;x86 platforms;android-33 build-tools;34.0.0-rc3 platform-tools emulator"
 
       - name: Setup Android SDK
