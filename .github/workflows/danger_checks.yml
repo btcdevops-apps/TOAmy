@@ -16,7 +16,8 @@ jobs:
       - name: Set Up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.7'
+          ruby-version: '2.7.4'
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
       - name: Danger Checks
         run: |
