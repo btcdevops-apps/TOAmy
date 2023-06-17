@@ -16,12 +16,12 @@ jobs:
       - name: Set Up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.0'
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          ruby-version: '2.6'
 
       - name: Danger Checks
         run: |
           gem install bundler
+          bundle install
           bundle exec danger
         #bundle install
 
