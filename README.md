@@ -13,7 +13,7 @@ As we build out this project, our goal will reemain on how we can look after use
 * github token:
   * https://github.com/btcdevops-apps/TOA/settings/actions
     * Workflow permissions
-* 
+* Update Danger file with required actions
 
 ## Github Actions
 * Errors:
