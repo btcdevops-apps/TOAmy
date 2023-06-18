@@ -6,6 +6,14 @@ As we build out this project, our goal will reemain on how we can look after use
 
 ## Stream History
 
+## [Danger for PR Automation](https://danger.systems/guides/getting_started.html)
+* Add Gemfile
+* Add Dangerfile
+* Add github action for danger checks danger_checks.yml
+* github token:
+  * https://github.com/btcdevops-apps/TOA/settings/actions
+    * Workflow permissions
+* Update Danger file with required actions
 
 ## Github Actions
 * Errors:
