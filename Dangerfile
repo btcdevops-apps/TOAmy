@@ -12,8 +12,8 @@ if github.pr_labels.empty?
     warn "Please add label(s) to this PR."
 end
 
-if git.deletions > git.additions
-    message "Code Cleanup!"
+if git.deletions > git.insertions
+    message  "🎉 Code Cleanup!"
 end
 
 if !git.modified_files.include?("README.md")
