@@ -1,6 +1,10 @@
 name: Danger Checks
 on: pull_request
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   danger:
     runs-on: ubuntu-latest
