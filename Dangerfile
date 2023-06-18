@@ -13,7 +13,7 @@ if github.pr_labels.empty?
 end
 
 if git.deletions > git.additions
-    message "🎉 Code Cleanup!"
+    message "Code Cleanup!"
 end
 
 if !git.modified_files.include?("README.md")
